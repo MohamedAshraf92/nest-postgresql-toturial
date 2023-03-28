@@ -15,7 +15,7 @@ export class UserController {
   @Post('/signin')
   signin(
     @Body() authCredentialsDTO: AuthCredentialsDTO,
-  ): Promise<{ accessToken: string }> {
+  ): Promise<{ accessToken: string; user: User }> {
     return this.userService.signin(authCredentialsDTO);
   }
 }
