@@ -27,7 +27,7 @@ export class Task {
   userId: string;
 
   @ManyToOne((_type) => User, (user) => user.tasks, { eager: false })
-  @JoinColumn({ name: 'userId', referencedColumnName: 'id' })
+  // @JoinColumn({ name: 'userId', referencedColumnName: 'id' })
   @Exclude({ toPlainOnly: true })
   user: User;
 }
